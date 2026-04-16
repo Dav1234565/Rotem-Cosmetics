@@ -164,3 +164,55 @@ transform: scale(1.08);
 filter: brightness(1.05);
 }
 ``
+/* ========= SERVICES MODERN ========= */
+
+.services {
+background: radial-gradient(
+circle at top right,
+rgba(255, 255, 255, 0.03),
+transparent 60%
+);
+}
+
+.section-title {
+font-size: 28px;
+margin-bottom: 8px;
+}
+
+.section-subtitle {
+color: #aaa;
+margin-bottom: 32px;
+font-size: 15px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 20px;
+}
+
+.service-card {
+background: #141418;
+border: 1px solid #23232b;
+border-radius: 18px;
+padding: 28px 20px;
+text-align: center;
+transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+border-color: #ff5ca8;
+}
+
+.service-icon {
+font-size: 30px;
+display: block;
+margin-bottom: 12px;
+}
+
+.service-card h3 {
+font-size: 17px;
+font-weight: 500;
+}
