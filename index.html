@@ -57,43 +57,48 @@
             <div class="container">
                 <div class="services-header">
                     <h2>שירותים</h2>
-                    <p>טיפולים אסתטיים באיכות בלתי מתפשרת</p>
+                    <p>טיפולים מקצועיים בהתאמה אישית</p>
                 </div>
 
-                <div class="services-list">
-                    <div class="service-item">
-                        <span class="service-number">01</span>
+                <div class="services-grid">
+                    <button class="service-card" data-title="לק ג׳ל" data-text="לק ג׳ל איכותי עם עמידות גבוהה, גימור נקי והתאמה מלאה לסגנון האישי שלך.">
+                        <span class="icon icon-gel"></span>
                         <h3>לק ג׳ל</h3>
-                        <p>גימור נקי, עמידות גבוהה ומראה אלגנטי.</p>
-                    </div>
+                    </button>
 
-                    <div class="service-item">
-                        <span class="service-number">02</span>
+                    <button class="service-card" data-title="בנייה / חיזוק" data-text="חיזוק ובנייה בהתאמה למבנה הציפורן, לשמירה על מראה טבעי ובריא לאורך זמן.">
+                        <span class="icon icon-build"></span>
                         <h3>בנייה / חיזוק</h3>
-                        <p>מבנה מדויק וחיזוק מותאם אישית.</p>
-                    </div>
+                    </button>
 
-                    <div class="service-item">
-                        <span class="service-number">03</span>
+                    <button class="service-card" data-title="מניקור" data-text="טיפול יסודי לקוטיקולה ולציפורן, עם דגש על ניקיון, בריאות ודיוק.">
+                        <span class="icon icon-manicure"></span>
                         <h3>מניקור</h3>
-                        <p>טיפול יסודי לשמירה על בריאות הציפורן.</p>
-                    </div>
+                    </button>
 
-                    <div class="service-item">
-                        <span class="service-number">04</span>
+                    <button class="service-card" data-title="פדיקור" data-text="טיפוח מקצועי לכף הרגל, כולל טיפול אסתטי וניקוי יסודי.">
+                        <span class="icon icon-pedicure"></span>
                         <h3>פדיקור</h3>
-                        <p>טיפוח כף הרגל עם דגש על אסתטיקה ונוחות.</p>
-                    </div>
+                    </button>
 
-                    <div class="service-item">
-                        <span class="service-number">05</span>
+                    <button class="service-card" data-title="עיצובים מיוחדים" data-text="פרנץ׳, אומברה, ציורים ועיצובים אישיים לפי בקשה וסטייל.">
+                        <span class="icon icon-design"></span>
                         <h3>עיצובים מיוחדים</h3>
-                        <p>פרנץ׳, אומברה ועיצובים מותאמים אישית.</p>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- POPUP -->
+        <div class="modal" id="serviceModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-box">
+                <button class="modal-close">✕</button>
+                <h3 id="modalTitle"></h3>
+                <p id="modalText"></p>
+            </div>
+        </div>
+        ``
         ``
 
 <section id="gallery" class="section">
