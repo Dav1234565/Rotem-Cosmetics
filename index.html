@@ -3,298 +3,228 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>סטודיו לציפורניים | Nail Studio</title>
-  <meta name="description" content="סטודיו לציפורניים: לק ג׳ל, בנייה, מניקור, פדיקור ועיצובים מיוחדים. הזמנה בוואטסאפ." />
+  <meta name="description" content="Rotem Cosmetics - סטודיו לציפורניים בפתח תקווה. לק ג׳ל, בנייה, מניקור ופדיקור. קביעת תור בוואטסאפ." />
+  <title>Rotem Cosmetics | סטודיו לציפורניים</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="סטודיו לציפורניים | Nail Studio" />
-  <meta property="og:description" content="לק ג׳ל, בנייה, מניקור, פדיקור ועיצובים. הזמנה בוואטסאפ." />
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Open Graph לשיתוף -->
+  <meta property="og:title" content="Rotem Cosmetics | סטודיו לציפורניים" />
+  <meta property="og:description" content="סטודיו לציפורניים בפתח תקווה. קביעת תור בוואטסאפ." />
   <meta property="og:type" content="website" />
-
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/main.js"></script>
-
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NailSalon",
-    "name": "Nail Studio",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "פתח תקווה",
-      "addressCountry": "IL"
-    },
-    "telephone": "+972500000000",
-    "url": "https://example.com",
-    "openingHours": "Mo,Tu,We,Th 09:00-19:00",
-    "priceRange": "₪₪"
-  }
-  </script>
 </head>
 
 <body>
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span>📍 פתח תקווה</span>
-      <a class="topbar__link" href="tel:+972500000000">📞 050-000-0000</a>
-      <a class="topbar__link" href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%AA%D7%95%D7%A8%20%F0%9F%92%85" target="_blank" rel="noopener">💬 וואטסאפ</a>
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header__inner">
-      <a class="logo" href="index.html" aria-label="דף הבית">
+      <a class="logo" href="#top">
         <span class="logo__mark">✨</span>
-        <span class="logo__text">Nail Studio</span>
+        <span class="logo__text">Rotem Cosmetics</span>
       </a>
 
-      <button class="navToggle" aria-expanded="false" aria-controls="navMenu">
-        ☰ תפריט
+      <button class="navToggle" aria-label="פתח תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
-      <nav id="navMenu" class="nav">
-        <a href="index.html" class="nav__link is-active">בית</a>
-        <a href="#services" class="nav__link">שירותים</a>
-        <a href="gallery.html" class="nav__link">גלריה</a>
-        <a href="prices.html" class="nav__link">מחירון</a>
-        <a href="contact.html" class="nav__link">יצירת קשר</a>
-        <a class="btn btn--primary nav__cta" href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%AA%D7%95%D7%A8%20%F0%9F%92%85" target="_blank" rel="noopener">לקביעת תור</a>
+      <nav class="nav" aria-label="ניווט ראשי">
+        <a href="#services">שירותים</a>
+        <a href="#gallery">גלריה</a>
+        <a href="#prices">מחירון</a>
+        <a href="#about">אודות</a>
+        <a href="#contact">יצירת קשר</a>
       </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost btn--call" href="tel:0522752249">התקשר עכשיו</a>
+        <a class="btn btn--primary btn--whatsapp" id="waTop" href="#" target="_blank" rel="noopener">
+          קביעת תור בוואטסאפ
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <main>
     <section class="hero">
-      <div class="container hero__inner">
+      <div class="container hero__grid">
         <div class="hero__content">
-          <h1 class="hero__title">ציפורניים מושלמות, בדיוק כמו שחלמת 💅</h1>
-          <p class="hero__subtitle">
-            לק ג׳ל • בנייה • מניקור • פדיקור • עיצובים מיוחדים — באווירה נעימה ובסטנדרט סטרילי.
+          <p class="badge">Rotem Cosmetics • פתח תקווה</p>
+          <h1>ציפורניים מושלמות, בסטייל שלך ✨</h1>
+          <p class="lead">
+            לק ג׳ל | בנייה / חיזוק | מניקור | פדיקור | תיקונים<br/>
+            עבודה נקייה, מקצועית ומדויקת — עם תוצאה שמחזיקה.
           </p>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%AA%D7%95%D7%A8%20%F0%9F%92%85" target="_blank" rel="noopener">קביעת תור בוואטסאפ</a>
-            <a class="btn btn--ghost" href="gallery.html">לצפייה בגלריה</a>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">קביעת תור</a>
+            <a class="btn btn--ghost" href="#gallery">לצפייה בגלריה</a>
+            <a class="btn btn--ghost" href="tel:0522752249">התקשר עכשיו</a>
           </div>
 
-          <div class="hero__badges" aria-label="יתרונות">
-            <span class="badge">⭐ 4.9/5 ביקורות</span>
-            <span class="badge">🧼 סטריליזציה מלאה</span>
-            <span class="badge">🎨 עיצובים בהתאמה אישית</span>
-          </div>
-        </div>
-
-        <div class="hero__media" role="img" aria-label="תמונה של ציפורניים מעוצבות">
-          <img src="assets/img/hero.jpg" alt="ציפורניים מעוצבות" loading="eager">
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>שירותים</h2>
-          <p>הכל במקום אחד — מקצועיות, איכות וחומרים מעולים.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>לק ג׳ל</h3>
-            <p>עבודה מדויקת ועמידה לאורך זמן, במבחר צבעים עשיר.</p>
-          </article>
-          <article class="card">
-            <h3>בנייה והארכה</h3>
-            <p>מבנה מותאם אישית, גימור טבעי וחזק.</p>
-          </article>
-          <article class="card">
-            <h3>מניקור / פדיקור</h3>
-            <p>טיפול יסודי, ניקוי מקצועי ומראה נקי ומטופח.</p>
-          </article>
-          <article class="card">
-            <h3>עיצובים מיוחדים</h3>
-            <p>אומברה, פרנץ׳, אבנים, ציורים — לפי הסטייל שלך.</p>
-          </article>
-          <article class="card">
-            <h3>חיזוק טבעי</h3>
-            <p>למי שרוצה מראה טבעי עם שכבת הגנה איכותית.</p>
-          </article>
-          <article class="card">
-            <h3>תיקונים / הסרה</h3>
-            <p>תיקון שבר, מילוי, הסרת ג׳ל — בעדינות וללא נזק.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery preview -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>טעימה מהעבודות</h2>
-          <p>לחצי/ה על תמונה כדי להגדיל. לעוד — עברי לגלריה.</p>
-        </div>
-
-        <div class="gallery">
-          <button class="gallery__item" data-lightbox="assets/img/g1.jpg" aria-label="פתיחת תמונה 1">
-            <img src="assets/img/g1.jpg" alt="עיצוב ציפורניים 1" loading="lazy">
-          </button>
-          <button class="gallery__item" data-lightbox="assets/img/g2.jpg" aria-label="פתיחת תמונה 2">
-            <img src="assets/img/g2.jpg" alt="עיצוב ציפורניים 2" loading="lazy">
-          </button>
-          <button class="gallery__item" data-lightbox="assets/img/g3.jpg" aria-label="פתיחת תמונה 3">
-            <img src="assets/img/g3.jpg" alt="עיצוב ציפורניים 3" loading="lazy">
-          </button>
-          <button class="gallery__item" data-lightbox="assets/img/g4.jpg" aria-label="פתיחת תמונה 4">
-            <img src="assets/img/g4.jpg" alt="עיצוב ציפורניים 4" loading="lazy">
-          </button>
-          <button class="gallery__item" data-lightbox="assets/img/g5.jpg" aria-label="פתיחת תמונה 5">
-            <img src="assets/img/g5.jpg" alt="עיצוב ציפורניים 5" loading="lazy">
-          </button>
-          <button class="gallery__item" data-lightbox="assets/img/g6.jpg" aria-label="פתיחת תמונה 6">
-            <img src="assets/img/g6.jpg" alt="עיצוב ציפורניים 6" loading="lazy">
-          </button>
-        </div>
-
-        <div class="section__actions">
-          <a class="btn btn--primary" href="gallery.html">לגלריה המלאה</a>
-          <a class="btn btn--ghost" href="prices.html">למחירון</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing preview -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>מחירון קצר</h2>
-          <p>מחירים לדוגמה — אפשר להתאים לפי העסק שלך.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="priceCard">
-            <h3>טיפולים נפוצים</h3>
-            <ul class="list">
-              <li><span>לק ג׳ל</span><strong>₪120</strong></li>
-              <li><span>מילוי</span><strong>₪140</strong></li>
-              <li><span>בנייה</span><strong>₪220</strong></li>
-              <li><span>מניקור</span><strong>₪90</strong></li>
-              <li><span>פדיקור</span><strong>₪130</strong></li>
-            </ul>
-            <a class="btn btn--ghost" href="prices.html">למחירון המלא</a>
-          </div>
-
-          <div class="ctaCard">
-            <h3>רוצה לתאם תור?</h3>
-            <p>שלחי הודעה בוואטסאפ עם סוג טיפול ותאריך מועדף.</p>
-            <a class="btn btn--primary" href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8%20%F0%9F%92%85%0A%D7%A9%D7%9D%3A%0A%D7%98%D7%99%D7%A4%D7%95%D7%9C%3A%0A%D7%AA%D7%90%D7%A8%D7%99%D7%9A%20%D7%9E%D7%95%D7%A2%D7%93%D7%A3%3A" target="_blank" rel="noopener">
-              שליחה לוואטסאפ
-            </a>
-            <p class="muted">* ניתן לשלב גם הזמנה אונליין בהמשך.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>לקוחות מספרות</h2>
-          <p>דוגמאות לטקסט — תחליף בביקורות אמיתיות מהעסק.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <figure class="quote">
-            <blockquote>“תוצאה מושלמת והכי חשוב — מחזיק מלא זמן!”</blockquote>
-            <figcaption>— נועה</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>“נקי, מקצועי, שירות מדהים. ממליצה בחום.”</blockquote>
-            <figcaption>— מאיה</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>“עיצובים ברמה גבוהה, בדיוק מה שרציתי.”</blockquote>
-            <figcaption>— שירה</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact block -->
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>יצירת קשר</h2>
-          <p>דבר/י איתי — וואטסאפ הכי מהיר 🙂</p>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3>פרטים</h3>
-            <p class="infoLine">📍 פתח תקווה</p>
-            <p class="infoLine">🕒 א׳-ה׳ 09:00–19:00</p>
-            <p class="infoLine">📞 <a href="tel:+972500000000">050-000-0000</a></p>
-            <p class="infoLine">📩 <a href="mailto:studio@example.com">studio@example.com</a></p>
-
-            <div class="row gap">
-              <a class="btn btn--primary" href="https://wa.me/972500000000" target="_blank" rel="noopener">וואטסאפ</a>
-              <a class="btn btn--ghost" href="contact.html">עמוד יצירת קשר</a>
+          <div class="hero__stats">
+            <div class="stat">
+              <strong>★ 4.9</strong>
+              <span>דירוג לקוחות</span>
+            </div>
+            <div class="stat">
+              <strong>+500</strong>
+              <span>לקוחות מרוצות</span>
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              <span>סטריליזציה</span>
             </div>
           </div>
+        </div>
 
-          <form class="card form" id="contactForm">
-            <h3>השאיר/י הודעה</h3>
-
-            <label>
-              שם מלא
-              <input type="text" name="name" required placeholder="לדוגמה: דנה לוי" />
-            </label>
-
-            <label>
-              טלפון
-              <input type="tel" name="phone" required placeholder="050-000-0000" />
-            </label>
-
-            <label>
-              הודעה
-              <textarea name="message" rows="4" required placeholder="איזה טיפול תרצי ומתי?"></textarea>
-            </label>
-
-            <button class="btn btn--primary" type="submit">שליחה</button>
-            <p class="muted">הטופס יפתח לך אימייל עם הפרטים (ללא שרת).</p>
-          </form>
+        <div class="hero__card">
+          <div class="hero__image" role="img" aria-label="תמונה של Rotem Cosmetics"></div>
+          <div class="hero__cardBody">
+            <h3>שעות פעילות</h3>
+            <ul class="list">
+              <li><span>א׳–ה׳</span><span>09:00–19:00</span></li>
+              <li><span>ו׳</span><span>09:00–13:00</span></li>
+              <li><span>שבת</span><span>סגור</span></li>
+            </ul>
+            <p class="muted">* ניתן לתאם גם בשעות גמישות לפי זמינות.</p>
+          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Nail Studio • כל הזכויות שמורות</p>
-      <div class="footer__links">
-        <a href="contact.html">יצירת קשר</a>
-        <a href="prices.html">מחירון</a>
-        <a href="gallery.html">גלריה</a>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>שירותים</h2>
+          <p>בחרי את מה שמתאים לך — ואם לא בטוחה, אני עוזרת להתאים.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card"><h3>לק ג׳ל</h3><p>ברק שנשאר, מגוון צבעים ועיצובים.</p></article>
+          <article class="card"><h3>בנייה / חיזוק</h3><p>מבנה נכון ותוצאה טבעית ומדויקת.</p></article>
+          <article class="card"><h3>מניקור</h3><p>ניקוי, קוטיקולות, שיוף ועיצוב.</p></article>
+          <article class="card"><h3>פדיקור</h3><p>טיפול מקצועי לכף הרגל + טיפוח.</p></article>
+          <article class="card"><h3>תיקונים</h3><p>שבר/קילוף — תיקון נקודתי מהיר.</p></article>
+          <article class="card"><h3>עיצובים</h3><p>פרנץ׳, אומברה, אבקות, ציורים ועוד.</p></article>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Lightbox modal -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox__close" aria-label="סגירה">✕</button>
-    <img class="lightbox__img" alt="תמונה מוגדלת" />
-  </div>
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>גלריה</h2>
+          <p>לחצי על תמונה כדי לפתוח אותה בגדול.</p>
+        </div>
 
-  <!-- Floating WhatsApp -->
-  <a class="fab" href="https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%AA%D7%95%D7%A8%20%F0%9F%92%85" target="_blank" rel="noopener" aria-label="פתיחת וואטסאפ">
-    💬
-  </a>
-</body>
-</html>
-``
+        <div class="grid gallery">
+          <button class="gItem" data-img="assets/img/g1.jpg" aria-label="פתיחת תמונה 1"><span class="gPh">תמונה 1</span></button>
+          <button class="gItem" data-img="assets/img/g2.jpg" aria-label="פתיחת תמונה 2"><span class="gPh">תמונה 2</span></button>
+          <button class="gItem" data-img="assets/img/g3.jpg" aria-label="פתיחת תמונה 3"><span class="gPh">תמונה 3</span></button>
+          <button class="gItem" data-img="assets/img/g4.jpg" aria-label="פתיחת תמונה 4"><span class="gPh">תמונה 4</span></button>
+          <button class="gItem" data-img="assets/img/g5.jpg" aria-label="פתיחת תמונה 5"><span class="gPh">תמונה 5</span></button>
+          <button class="gItem" data-img="assets/img/g6.jpg" aria-label="פתיחת תמונה 6"><span class="gPh">תמונה 6</span></button>
+        </div>
+
+        <div class="note">
+          אם אין לך עדיין תמונות — זה בסדר. כשתעלה קבצים ל־assets/img עם השמות g1.jpg וכו׳ זה יתחיל לעבוד.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>מחירון</h2>
+          <p>עדכן מחירים לפי העסק שלך.</p>
+        </div>
+
+        <div class="grid priceGrid">
+          <div class="priceCard">
+            <h3>לק ג׳ל</h3>
+            <p class="price">₪120</p>
+            <ul class="bullets">
+              <li>כולל עיצוב בסיסי</li>
+              <li>הסרה קודמת בתוספת</li>
+            </ul>
+          </div>
+
+          <div class="priceCard">
+            <h3>בנייה / חיזוק</h3>
+            <p class="price">₪220</p>
+            <ul class="bullets">
+              <li>מבנה והתאמה לציפורן</li>
+              <li>כולל גימור מקצועי</li>
+            </ul>
+          </div>
+
+          <div class="priceCard">
+            <h3>פדיקור</h3>
+            <p class="price">₪180</p>
+            <ul class="bullets">
+              <li>טיפול מלא</li>
+              <li>כולל לק ג׳ל בתוספת</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="about">
+      <div class="container about">
+        <div class="about__text">
+          <h2>אודות</h2>
+          <p>
+            Rotem Cosmetics — סטודיו לציפורניים בפתח תקווה.
+            כאן אפשר לכתוב 4–6 שורות עלייך/על הגישה שלך, ניסיון, ומה מייחד אותך.
+          </p>
+
+          <div class="chips">
+            <span class="chip">סטריליזציה מלאה</span>
+            <span class="chip">חומרים איכותיים</span>
+            <span class="chip">התאמה אישית</span>
+          </div>
+        </div>
+
+        <div class="about__box">
+          <h3>מיקום</h3>
+          <p class="muted">פתח תקווה</p>
+          <div class="mapPh">אפשר להוסיף מפה בהמשך</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>קביעת תור / יצירת קשר</h2>
+          <p>קובעים תור בוואטסאפ. למענה מהיר אפשר גם להתקשר.</p>
+        </div>
+
+        <div class="grid contactGrid">
+          <div class="contactCard">
+            <h3>וואטסאפ</h3>
+            <p class="muted">ממלאים פרטים וזה פותח הודעה מוכנה בוואטסאפ.</p>
+
+            <form class="form" id="waForm">
+              <label>
+                שם
+                <input type="text" id="name" placeholder="דוגמה: דנה" autocomplete="name" />
+              </label>
+
+              <label>
+                שירות
+                <select id="service">
+                  <option>לק ג׳ל</option>
+                  <option>בנייה / חיזוק</option>
+                  <option>מניקור</option>
+                  <option>פדיקור</option>
+                  <option>תיקון</option>
+                  <option>עיצוב מיוחד</option>
+                </select>
+              </label>
+
+              <label>
+                תאריך/שעה מועדפים
+                <input type="text" id="when" placeholder="דוגמה: חמישי 18:00" />
+              </label>
+
