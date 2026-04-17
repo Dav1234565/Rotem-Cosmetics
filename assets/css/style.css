@@ -96,7 +96,7 @@ border-color: #ff5ca8;
 }
 
 /* =====================
-SERVICES – CLEAN VERSION
+SERVICES
 ===================== */
 .services-lux {
 background: radial-gradient(
@@ -128,17 +128,14 @@ gap: 24px;
 }
 
 /* =====================
-SERVICE CARD WITH IMAGE
+SERVICE CARD (WORKING VERSION)
 ===================== */
-/* ===== SERVICE CARD – FIXED LAYERS ===== */
-
 .service-card {
 position: relative;
 height: 180px;
 border-radius: 22px;
 overflow: hidden;
 border: 1px solid #2a2a33;
-background-color: #121218;
 cursor: pointer;
 
 display: flex;
@@ -148,7 +145,7 @@ justify-content: center;
 transition: transform .3s ease, box-shadow .3s ease;
 }
 
-/* ✅ התמונה – שכבה תחתונה */
+/* IMAGE */
 .service-card::before {
 content: "";
 position: absolute;
@@ -159,10 +156,10 @@ background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 
-z-index: 1;          /* 🔑 חשוב */
+z-index: 1;
 }
 
-/* ✅ שכבת כהות */
+/* DARK OVERLAY */
 .service-card::after {
 content: "";
 position: absolute;
@@ -173,26 +170,26 @@ to top,
 rgba(0,0,0,0.75),
 rgba(0,0,0,0.2)
 );
-z-index: 2;          /* מעל התמונה */
+
+z-index: 2;
 }
 
-/* ✅ טקסט */
+/* TEXT */
 .service-title {
 position: relative;
-z-index: 3;          /* מעל הכל */
+z-index: 3;
 padding-bottom: 18px;
 font-size: 18px;
 font-weight: 500;
 }
 
-/* ✅ GLOW + HOVER */
+/* GLOW / HOVER */
 .service-card.glow:hover {
 transform: translateY(-6px);
 box-shadow:
 0 0 22px rgba(255,92,168,0.35),
 0 20px 40px rgba(0,0,0,0.6);
 }
-
 
 /* =====================
 GALLERY
