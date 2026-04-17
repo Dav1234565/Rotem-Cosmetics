@@ -53,7 +53,7 @@
             טיפולים מקצועיים בהתאמה אישית
         </p>
 
-        <section id="services" class="section services-lux">
+        <section class="section services-lux">
             <div class="container">
                 <div class="services-header">
                     <h2>שירותים</h2>
@@ -61,30 +61,37 @@
                 </div>
 
                 <div class="services-grid">
-                    <button class="service-card">
+
+                    <button class="service-card glow service-gel"
+                            data-title="לק ג׳ל"
+                            data-text="לק ג׳ל איכותי עם עמידות גבוהה, מראה מבריק ונקי והתאמה אישית לכל לקוחה.">
                         <span class="service-title">לק ג׳ל</span>
                     </button>
 
-
-                    <button class="service-card" data-title="בנייה / חיזוק" data-text="חיזוק ובנייה בהתאמה למבנה הציפורן, לשמירה על מראה טבעי ובריא לאורך זמן.">
-                        <span class="icon icon-build"></span>
-                        <h3>בנייה / חיזוק</h3>
+                    <button class="service-card glow"
+                            data-title="בנייה / חיזוק"
+                            data-text="חיזוק ובניית ציפורניים בהתאמה למבנה האישי, למראה טבעי ועמיד.">
+                        <span class="service-title">בנייה / חיזוק</span>
                     </button>
 
-                    <button class="service-card" data-title="מניקור" data-text="טיפול יסודי לקוטיקולה ולציפורן, עם דגש על ניקיון, בריאות ודיוק.">
-                        <span class="icon icon-manicure"></span>
-                        <h3>מניקור</h3>
+                    <button class="service-card glow"
+                            data-title="מניקור"
+                            data-text="טיפול יסודי לקוטיקולה ולציפורן, שמירה על בריאות וניקיון.">
+                        <span class="service-title">מניקור</span>
                     </button>
 
-                    <button class="service-card" data-title="פדיקור" data-text="טיפוח מקצועי לכף הרגל, כולל טיפול אסתטי וניקוי יסודי.">
-                        <span class="icon icon-pedicure"></span>
-                        <h3>פדיקור</h3>
+                    <button class="service-card glow"
+                            data-title="פדיקור"
+                            data-text="טיפוח מקצועי לכפות הרגליים, כולל ניקוי וטיפול אסתטי.">
+                        <span class="service-title">פדיקור</span>
                     </button>
 
-                    <button class="service-card" data-title="עיצובים מיוחדים" data-text="פרנץ׳, אומברה, ציורים ועיצובים אישיים לפי בקשה וסטייל.">
-                        <span class="icon icon-design"></span>
-                        <h3>עיצובים מיוחדים</h3>
+                    <button class="service-card glow"
+                            data-title="עיצובים מיוחדים"
+                            data-text="פרנץ׳, אומברה ועיצובים אישיים בהתאמה לסטייל שלך.">
+                        <span class="service-title">עיצובים מיוחדים</span>
                     </button>
+
                 </div>
             </div>
         </section>
@@ -98,7 +105,6 @@
                 <p id="modalText"></p>
             </div>
         </div>
-        ``
         ``
 
 <section id="gallery" class="section">
@@ -147,9 +153,28 @@
     </div>
 </section>
 
-<footer class="footer">
-    <p>© Rotem Cosmetics</p>
-</footer>
+        <footer class="footer">
+            <p>© Rotem Cosmetics</p>
+        </footer>
+
+        <!-- ===== POPUP SCRIPT ===== -->
+        <script>
+            const modal = document.getElementById("serviceModal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalText = document.getElementById("modalText");
+          
+            document.querySelectorAll(".service-card").forEach(card => {
+              card.addEventListener("click", () => {
+                modalTitle.textContent = card.dataset.title;
+                modalText.textContent = card.dataset.text;
+                modal.classList.add("active");
+              });
+            });
+          
+            document.querySelector(".modal-close").onclick =
+            document.querySelector(".modal-overlay").onclick =
+              () => modal.classList.remove("active");
+        </script>
 
 </body>
 </html>
