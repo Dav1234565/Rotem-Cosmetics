@@ -1,37 +1,42 @@
+// ===== ROTEM COSMETICS - MAIN SCRIPT =====
+
 // שנה בפוטר
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
 // תפריט מובייל
 const toggle = document.querySelector(".navToggle");
 const nav = document.querySelector(".nav");
 
 if (toggle && nav) {
-toggle.addEventListener("click", () => {
-const isOpen = nav.classList.toggle("open");
-toggle.setAttribute("aria-expanded", String(isOpen));
-});
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-nav.querySelectorAll("a").forEach(a => {
-a.addEventListener("click", () => {
-nav.classList.remove("open");
-toggle.setAttribute("aria-expanded", "false");
-});
-});
+  nav.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
 
 // WhatsApp — מספר בפורמט בינלאומי (ישראל 972 + בלי 0)
 const WHATSAPP_PHONE = "972522752249"; // 052-2752249
 
 function buildWhatsAppLink(name, service, when) {
-const lines = [
-"היי רותם! אשמח לקבוע תור 😊",
-name ? `שם: ${name}` : null,
-service ? `שירות: ${service}` : null,
-when ? `מועד מועדף: ${when}` : null
-].filter(Boolean);
+  const lines = [
+    "היי רותם! אשמח לקבוע תור 😊",
+    name ? `שם: ${name}` : null,
+    service ? `שירות: ${service}` : null,
+    when ? `מועד מועדף: ${when}` : null
+  ].filter(Boolean);
 
-const text = encodeURIComponent(lines.join("\n"));
-return `https://wa.me/${WHATSAPP_PHONE}?text=${text}`;
+  const text = encodeURIComponent(lines.join("\n"));
+  return `https://wa.me/${WHATSAPP_PHONE}?text=${text}`;
 }
 
 // כפתור וואטסאפ למעלה
@@ -45,69 +50,52 @@ if (waInline) waInline.href = buildWhatsAppLink("", "קביעת תור", "");
 // טופס וואטסאפ
 const waForm = document.getElementById("waForm");
 if (waForm) {
-waForm.addEventListener("submit", (e) => {
-e.preventDefault();
-const name = document.getElementById("name")?.value?.trim();
-const service = document.getElementById("service")?.value?.trim();
-const when = document.getElementById("when")?.value?.trim();
-const url = buildWhatsAppLink(name, service, when);
-window.open(url, "_blank", "noopener");
-});
+  waForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name")?.value?.trim();
+    const service = document.getElementById("service")?.value?.trim();
+    const when = document.getElementById("when")?.value?.trim();
+    const url = buildWhatsAppLink(name, service, when);
+    window.open(url, "_blank", "noopener");
+  });
 }
 
-// גלריה מודאלית
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-
-function openModal(src) {
-if (!modal || !modalImg) return;
-modalImg.src = src;
-modal.setAttribute("aria-hidden", "false");
-document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-if (!modal) return;
-modal.setAttribute("aria-hidden", "true");
-document.body.style.overflow = "";
-if (modalImg) modalImg.src = "";
-}
-
-document.querySelectorAll(".gItem").forEach(btn => {
-btn.addEventListener("click", () => {
-const src = btn.getAttribute("data-img");
-if (src) openModal(src);
-});
+// גלילה חלקה לעוגנים
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href === "#") return;
+    
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
 });
 
-if (modal) {
-modal.addEventListener("click", (e) => {
-const t = e.target;
-if (t?.getAttribute?.("data-close") === "true") closeModal();
-});
-}
+// הוספת אנימציות בגלילה (Intersection Observer)
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
 
-document.addEventListener("keydown", (e) => {
-if (e.key === "Escape") closeModal();
-});
-``
-const modal = document.getElementById("serviceModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalText = document.getElementById("modalText");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, observerOptions);
 
-document.querySelectorAll(".service-card").forEach(card => {
-card.addEventListener("click", () => {
-modalTitle.textContent = card.dataset.title;
-modalText.textContent = card.dataset.text;
-modal.classList.add("active");
+// הוספת אנימציות לסקשנים
+document.querySelectorAll(".section").forEach(section => {
+  section.style.opacity = "0";
+  section.style.transform = "translateY(20px)";
+  section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+  observer.observe(section);
 });
-});
-
-document.querySelector(".modal-close").addEventListener("click", () => {
-modal.classList.remove("active");
-});
-
-document.querySelector(".modal-overlay").addEventListener("click", () => {
-modal.classList.remove("active");
-});
-``
