@@ -36,7 +36,7 @@ HERO
 /* =====================
 BUTTONS
 ===================== */
-.buttons { display: flex; gap: 15px; justify-content: center; }
+.buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 .btn {
 padding: 12px 18px;
 border: 1px solid #fff;
@@ -79,11 +79,9 @@ justify-content: center;
 background: linear-gradient(180deg, #2e2e34 0%, #1d1d22 100%);
 transition: transform .3s ease, box-shadow .3s ease;
 
-/* ✅ כל כפתור יקבל תמונה דרך משתנה */
---service-bg: none;
+--service-bg: none; /* כל כפתור יקבל תמונה דרך משתנה */
 }
 
-/* ✅ התמונה/אייקון לכל הכפתורים */
 .service-card::before{
 content:"";
 position:absolute;
@@ -98,7 +96,6 @@ z-index: 1;
 opacity: .95;
 }
 
-/* ✅ שכבת כהות (מומלץ לכל הכפתורים כדי שהטקסט יהיה קריא) */
 .service-card::after{
 content:"";
 position:absolute;
@@ -122,26 +119,18 @@ box-shadow: 0 0 22px rgba(255,92,168,0.35), 0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* ===== ICONS / IMAGES PER SERVICE ===== */
-/* שים לב: style.css בתוך assets/css ולכן הנתיב הוא ../../icons/... */
+/* style.css נמצא ב-assets/css לכן הנתיב הוא ../../icons/... */
 .service-gel      { --service-bg: url("../../icons/image1.jpg"); }
-.service-build    { --service-bg: url("../../icons/image2.jpg"); }
-.service-manicure { --service-bg: url("../../icons/image3.jpg"); }
-.service-pedicure { --service-bg: url("../../icons/image4.jpg"); }
-.service-design   { --service-bg: url("../../icons/image5.jpg"); }
-``
-
-/* Glow */
-.service-card.glow:hover {
-transform: translateY(-6px);
-box-shadow: 0 0 22px rgba(255,92,168,0.35), 0 20px 40px rgba(0,0,0,0.6);
-}
+.service-build    { --service-bg: url("../../icons/image%20(1).jpg"); }
+.service-manicure { --service-bg: url("../../icons/image%20(2).jpg"); }
+.service-pedicure { --service-bg: url("../../icons/image%20(3).jpg"); }
+.service-design   { --service-bg: url("../../icons/image%20(4).jpg"); }
 
 /* =====================
-MODAL (POPUP)
+MODAL (SERVICES POPUP)
 ===================== */
 .modal { position: fixed; inset: 0; display: none; z-index: 1000; }
 .modal.active { display: block; }
-
 .modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); }
 
 .modal-box {
@@ -176,38 +165,170 @@ cursor: pointer;
 }
 
 /* =====================
-GALLERY
+PRO GALLERY (main + thumbs strip)
 ===================== */
+.pro-gallery{
+margin-top: 18px;
+display: grid;
+gap: 14px;
+}
+
+.gallery-head{
+display:flex;
+align-items:flex-end;
+justify-content:space-between;
+gap:12px;
+}
+
 .subtitle { margin-top: 10px; color: #aaa; font-size: 15px; }
 
-.gallery {
-margin-top: 30px;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-gap: 16px;
+/* MAIN */
+.pro-main{
+position: relative;
+border: 1px solid #2a2a33;
+border-radius: 18px;
+overflow: hidden;
+padding: 0;
+background: #101014;
+cursor: pointer;
 }
 
-.gallery-item { border-radius: 16px; overflow: hidden; }
-.gallery-item img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.pro-main img{
+width: 100%;
+height: min(520px, 52vh);
+object-fit: cover;
+display: block;
+transform: scale(1);
+transition: transform .35s ease;
+}
+
+.pro-main:hover img{ transform: scale(1.02); }
+
+.pro-mainOverlay{
+position:absolute;
+inset: auto 0 0 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+padding: 12px 14px;
+color:#fff;
+background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0));
+font-size: 14px;
+}
+
+/* THUMBS STRIP */
+.pro-thumbs{
+display:flex;
+gap:12px;
+overflow-x:auto;
+padding: 8px 4px 10px;
+scroll-snap-type: x mandatory;
+-webkit-overflow-scrolling: touch;
+}
+
+.pro-thumbs::-webkit-scrollbar{ height: 10px; }
+.pro-thumbs::-webkit-scrollbar-thumb{ background:#2a2a33; border-radius: 99px; }
+
+.pro-thumb{
+flex: 0 0 auto;
+width: 110px;
+height: 110px;
+border-radius: 16px;
+overflow: hidden;
+border: 1px solid #2a2a33;
+background:#111;
+padding:0;
+cursor:pointer;
+scroll-snap-align: start;
+position: relative;
+}
+
+.pro-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+filter: saturate(1.02);
+transition: transform .25s ease;
+}
+
+.pro-thumb:hover img{ transform: scale(1.05); }
+
+.pro-thumb.is-active{
+border-color: #ff5ca8;
+box-shadow: 0 0 18px rgba(255,92,168,.22);
+}
+
+@media (max-width: 600px){
+.pro-thumb{ width: 92px; height: 92px; }
+.pro-main img{ height: min(420px, 45vh); }
+}
 
 /* =====================
-FOOTER
+FULLSCREEN IMAGE MODAL (GALLERY)
 ===================== */
-.footer { text-align: center; padding: 25px 0; background: #000; color: #888; }
+.img-modal{
+position: fixed;
+inset: 0;
+display: none;
+z-index: 2000;
+}
+.img-modal[aria-hidden="false"]{ display:block; }
+
+.img-modal__backdrop{
+position:absolute;
+inset:0;
+background: rgba(0,0,0,.78);
+}
+
+.img-modal__content{
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+width: min(980px, 94%);
+background: #0f0f14;
+border: 1px solid #2a2a33;
+border-radius: 18px;
+padding: 14px;
+box-shadow: 0 30px 90px rgba(0,0,0,.7);
+}
+
+.img-modal__close{
+position:absolute;
+top: 10px;
+left: 10px;
+width: 42px;
+height: 42px;
+border-radius: 14px;
+border: 1px solid #2a2a33;
+background: rgba(255,255,255,.04);
+color:#fff;
+cursor:pointer;
+}
+
+#imgModalImg{
+width:100%;
+max-height: 78vh;
+object-fit: contain;
+display:block;
+border-radius: 14px;
+}
+
+.img-modal__caption{
+margin-top: 10px;
+color: #b7b7b7;
+font-size: 14px;
+text-align: right;
+}
 
 /* =====================
-MOBILE
+DIRECTIONS + MAP
 ===================== */
-@media (max-width: 600px) {
-.buttons { flex-direction: column; }
-.hero h2 { font-size: 26px; }
-}
-.directions{: 12px;
-flex-wrap: wrap;
-}
 .directions{
 margin-top: 16px;
-display: flex;
+display:flex;
 gap: 12px;
 flex-wrap: wrap;
 }
@@ -229,5 +350,18 @@ display: block;
 
 @media (max-width: 600px){
 .map-wrap iframe{ height: 260px; }
+}
+
+/* =====================
+FOOTER
+===================== */
+.footer { text-align: center; padding: 25px 0; background: #000; color: #888; }
+
+/* =====================
+MOBILE
+===================== */
+@media (max-width: 600px) {
+.buttons { flex-direction: column; }
+.hero h2 { font-size: 26px; }
 }
 ``
