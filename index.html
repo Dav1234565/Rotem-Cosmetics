@@ -1,180 +1,181 @@
-<!doctype html>
-<html lang="he" dir="rtl">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rotem Cosmetics</title>
-    <meta name="description" content="Rotem Cosmetics - סטודיו לציפורניים בפתח תקווה">
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: #0e0e12;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-<body>
+/* =====================
+   LAYOUT
+===================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
 
-<header class="header">
-    <div class="container">
-        <h1 class="logo">Rotem Cosmetics</h1>
+.section {
+  padding: 60px 0;
+}
 
-        <nav class="nav">
-            <a href="#about">אודות</a>
-            <a href="#services">שירותים</a>
-            <a href="#gallery">גלריה</a>
-            <a href="#contact">יצירת קשר</a>
-        </nav>
-    </div>
-</header>
+.section.dark {
+  background: #16161d;
+}
 
-<section class="hero">
-    <div class="container">
-        <h2>ציפורניים מושלמות בסטייל שלך ✨</h2>
-        <p>לק ג׳ל · בנייה · מניקור · פדיקור</p>
+/* =====================
+   HEADER
+===================== */
+.header {
+  background: #000;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+}
 
-        <div class="buttons">
-            <a class="btn primary" href="#contact">קביעת תור בוואטסאפ</a>
-            <a class="btn" href="tel:0522752249">התקשר עכשיו</a>
-        </div>
-    </div>
-</section>
+.logo {
+  font-size: 22px;
+}
 
-<section id="about" class="section">
-    <div class="container">
-        <h2>אודות</h2>
-        <p>
-            Rotem Cosmetics הוא סטודיו לציפורניים בפתח תקווה, עם דגש על עבודה
-            נקייה, מקצועית והתאמה אישית לכל לקוחה.
-        </p>
-    </div>
-</section>
+.nav {
+  margin-top: 10px;
+}
 
-<section id="services" class="section services">
-    <div class="container">
-        <h2 class="section-title">שירותים</h2>
-        <p class="section-subtitle">
-            טיפולים מקצועיים בהתאמה אישית
-        </p>
+.nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
 
-        <section class="section services-lux">
-            <div class="container">
-                <div class="services-header">
-                    <h2>שירותים</h2>
-                    <p>טיפולים מקצועיים בהתאמה אישית</p>
-                </div>
+/* =====================
+   HERO
+===================== */
+.hero {
+  text-align: center;
+  padding: 80px 0;
+}
 
-                <div class="services-grid">
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-                    <button class="service-card glow service-gel"
-                            data-title="לק ג׳ל"
-                            data-text="לק ג׳ל איכותי עם עמידות גבוהה, מראה מבריק ונקי והתאמה אישית לכל לקוחה.">
-                        <span class="service-title">לק ג׳ל</span>
-                    </button>
+.hero p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
 
-                    <button class="service-card glow"
-                            data-title="בנייה / חיזוק"
-                            data-text="חיזוק ובניית ציפורניים בהתאמה למבנה האישי, למראה טבעי ועמיד.">
-                        <span class="service-title">בנייה / חיזוק</span>
-                    </button>
+/* =====================
+   BUTTONS
+===================== */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
 
-                    <button class="service-card glow"
-                            data-title="מניקור"
-                            data-text="טיפול יסודי לקוטיקולה ולציפורן, שמירה על בריאות וניקיון.">
-                        <span class="service-title">מניקור</span>
-                    </button>
+.btn {
+  padding: 12px 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
 
-                    <button class="service-card glow"
-                            data-title="פדיקור"
-                            data-text="טיפוח מקצועי לכפות הרגליים, כולל ניקוי וטיפול אסתטי.">
-                        <span class="service-title">פדיקור</span>
-                    </button>
+.btn.primary {
+  background: #ff5ca8;
+  border-color: #ff5ca8;
+}
 
-                    <button class="service-card glow"
-                            data-title="עיצובים מיוחדים"
-                            data-text="פרנץ׳, אומברה ועיצובים אישיים בהתאמה לסטייל שלך.">
-                        <span class="service-title">עיצובים מיוחדים</span>
-                    </button>
+/* =====================
+   SERVICES
+===================== */
+.services-lux {
+  background: radial-gradient(
+    600px 400px at top right,
+    rgba(255,255,255,0.05),
+    transparent 70%
+  );
+}
 
-                </div>
-            </div>
-        </section>
+.services-header {
+  max-width: 420px;
+  margin-bottom: 40px;
+}
 
-        <!-- POPUP -->
-        <div class="modal" id="serviceModal">
-            <div class="modal-overlay"></div>
-            <div class="modal-box">
-                <button class="modal-close">✕</button>
-                <h3 id="modalTitle"></h3>
-                <p id="modalText"></p>
-            </div>
-        </div>
-        ``
+.services-header h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
 
-<section id="gallery" class="section">
-    <div class="container">
-        <h2>גלריה</h2>
-        <p class="subtitle">עבודות נבחרות מ‑Rotem Cosmetics</p>
+.services-header p {
+  color: #9a9a9a;
+  font-size: 15px;
+}
 
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="img/1.jpeg" alt="עבודת ציפורניים">
-            </div>
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
 
-            <div class="gallery-item">
-                <img src="img/2.jpeg" alt="עבודת ציפורניים">
-            </div>
+/* =====================
+   SERVICE CARD (WORKING VERSION)
+===================== */
+.service-card {
+  position: relative;
+  height: 180px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #2a2a33;
+  cursor: pointer;
 
-            <div class="gallery-item">
-                <img src="img/3.jpeg" alt="עבודת ציפורניים">
-            </div>
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-            <div class="gallery-item">
-                <img src="img/4.jpeg" alt="עבודת ציפורניים">
-            </div>
+  transition: transform .3s ease, box-shadow .3s ease;
+}
 
-            <div class="gallery-item">
-                <img src="img/5.jpeg" alt="עבודת ציפורניים">
-            </div>
+/* IMAGE */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-            <div class="gallery-item">
-                <img src="img/6.jpeg" alt="עבודת ציפורניים">
-            </div>
-        </div>
-    </div>
-</section>
+  background-image: url("/username.github.io/icons/image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-<section id="contact" class="section dark">
-    <div class="container">
-        <h2>יצירת קשר</h2>
+  z-index: 1;
+}
 
-        <a class="btn primary" href="https://wa.me/972522752249" target="_blank">
-            קביעת תור בוואטסאפ
-        </a>
+/* DARK OVERLAY */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 
-        <p>📞 052‑275‑2249</p>
-        <p>📍 פתח תקווה</p>
-    </div>
-</section>
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.2)
+  );
 
-        <footer class="footer">
-            <p>© Rotem Cosmetics</p>
-        </footer>
+  z-index: 2;
+}
 
-        <!-- ===== POPUP SCRIPT ===== -->
-        <script>
-            const modal = document.getElementById("serviceModal");
-            const modalTitle = document.getElementById("modalTitle");
-            const modalText = document.getElementById("modalText");
-          
-            document.querySelectorAll(".service-card").forEach(card => {
-              card.addEventListener("click", () => {
-                modalTitle.textContent = card.dataset.title;
-                modalText.textContent = card.dataset.text;
-                modal.classList.add("active");
-              });
-            });
-          
-            document.querySelector(".modal-close").onclick =
-            document.querySelector(".modal-overlay").onclick =
-              () => modal.classList.remove("active");
-        </script>
-
-</body>
-</html>
+/* TEXT */
+.service-title {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 18px;
