@@ -205,6 +205,12 @@ MOBILE
 .directions{: 12px;
 flex-wrap: wrap;
 }
+.directions{
+margin-top: 16px;
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
 
 .map-wrap{
 margin-top: 16px;
@@ -225,5 +231,3 @@ display: block;
 .map-wrap iframe{ height: 260px; }
 }
 ``
-margin-top: 16px;
-display: flex;
